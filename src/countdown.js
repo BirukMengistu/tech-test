@@ -34,9 +34,7 @@ const countdown = function(config) {
     // Find the distance between now an the count down date
     const distance = (countDownDate - now) < 0 ? 0 : countDownDate - now;
     
-    //change the heading when distance getting 0
-    if(distance === 0)
-    select('.wrapper>h1').innerText= 'We Are Live!'
+    
     
     
     // Time calculations for days, hours, minutes and seconds
@@ -53,6 +51,8 @@ const countdown = function(config) {
     
     // If the count down gets to zero
     if (distance === 0) {
+      //change the heading when distance getting 0
+    select('.wrapper>h1').innerText= 'We Are Live!'
       config.callback();
     }
     
